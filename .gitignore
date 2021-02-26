@@ -338,3 +338,15 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Assets/AssetsPacks/BOXOPHOBIC/Utils/Resources
+/Assets/AssetsPacks/Cursor
+/Assets/AssetsPacks/DogKnight
+/Assets/AssetsPacks
+/Assets/Animations/Enemy/Slime
+/Assets/Addons/Polybrush/1.0.2/Shader Examples (Universal RP)
+/Assets/Addons/ProBuilder/4.5.0/Universal Render Pipeline Support/Material
+/Assets/Addons/ProBuilder/4.5.0/Universal Render Pipeline Support
+/Assets/Polybrush Data
+/Library
+/Temp
+/ProjectSettings

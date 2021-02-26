@@ -50,12 +50,14 @@ public class PlayerController : MonoBehaviour
     public void MoveToTarget(Vector3 target)
     {
         StopAllCoroutines();
+        if (isDead) return;
         agent.isStopped = false;
         agent.destination = target;
     }
 
     private void EventAttack(GameObject target)
     {
+        if (isDead) return;
         if (target != null)
         {
             attackTarget = target;

@@ -25,8 +25,8 @@ public class PlayerController : MonoBehaviour
     {
         MouseManager.Instance.OnMouseClicked += MoveToTarget;
         MouseManager.Instance.OnEnemyClicked += EventAttack;
-        //characterStates.MaxHealth = 2;
-        //characterStates.characterData.maxHealth = 4;
+
+        GameManager.Instance.RegisterPlayer(characterStates);
     }
 
     private void Update()

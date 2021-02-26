@@ -7,9 +7,8 @@ using System;
 //[System.Serializable] //EventVector3未继承至MonoBehaviour,不能在Unity中显示出来，需要序列化
 //public class EventVector3 : UnityEvent<Vector3> { }
 
-public class MouseManager : MonoBehaviour
+public class MouseManager : Singleton<MouseManager>
 {
-    public static MouseManager Instance;
     public Texture2D point, doorway, attack, target, arrow;
 
     private RaycastHit hitInfo;
@@ -19,13 +18,10 @@ public class MouseManager : MonoBehaviour
 
     public event Action<GameObject> OnEnemyClicked;
 
-    private void Awake()
+    protected override void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-        }
-        Instance = this;
+        base.Awake();
+        //DontDestroyOnLoad(this);
     }
 
     private void Update()

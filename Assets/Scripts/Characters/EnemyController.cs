@@ -121,17 +121,21 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
         switch (enemyStates)
         {
             case EnemyStates.GUARD:
+                Debug.Log("test333");
                 isChase = false;
                 if (transform.position != guardPos)
                 {
+                    Debug.Log("test1");
                     isWalk = true;
                     agent.isStopped = false;
                     agent.destination = guardPos;
-                    if (Vector3.SqrMagnitude(guardPos - transform.position) <= agent.stoppingDistance)
+                    //if (Vector3.SqrMagnitude(guardPos - transform.position) <= agent.stoppingDistance)
+                    if (Vector3.Distance(guardPos, transform.position) <= agent.stoppingDistance)
                     {
-                        isWalk = false;
                         //ÂýÂý×ªÏò
                         transform.rotation = Quaternion.Lerp(transform.rotation, guardRotation, 0.02f);
+                        isWalk = false;
+                        Debug.Log("test2");
                     }
                 }
                 break;
@@ -173,7 +177,10 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
                         remainLookAtTime -= Time.deltaTime;
                     }
                     else if (isGuard)
+                    {
                         enemyStates = EnemyStates.GUARD;
+                        remainLookAtTime = lookAtTime;
+                    }
                     else
                     {
                         enemyStates = EnemyStates.PATROL;
@@ -202,7 +209,6 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
                         Attack();
                     }
                 }
-
                 break;
 
             case EnemyStates.DEAD:

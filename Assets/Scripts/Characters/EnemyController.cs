@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
         GameManager.Instance.AddObserver(this);
     }
 
-    //切换场景时启用
+    //切换场景加载时启用
     //private void OnEnable()
     //{
     //    GameManager.Instance.AddObserver(this);
@@ -207,7 +207,8 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
 
             case EnemyStates.DEAD:
                 coll.enabled = false;
-                agent.enabled = false;
+                //agent.enabled = false;
+                agent.radius = 0;
                 Destroy(gameObject, 3f);
                 break;
 

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Grunt : EnemyController
 {
     [Header("Skill")]
-    public float kickForce;
+    public float kickForce = 18;
 
     public void KickOff()
     {

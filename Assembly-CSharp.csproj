@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Characters\Enemy\Grunt.cs" />
     <Compile Include="Assets\Scripts\AnimationBehavior\StopAgent.cs" />
     <Compile Include="Assets\Scripts\Managers\Tools\ExtensionMethod.cs" />
+    <Compile Include="Assets\Scripts\Characters\Enemy\Golem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\AssetsPacks\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />

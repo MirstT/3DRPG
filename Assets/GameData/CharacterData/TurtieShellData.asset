@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TurtieShellData
   m_EditorClassIdentifier: 
   maxHealth: 40
-  currentHealth: 400
+  currentHealth: 40
   baseDefence: 3
   currentDefence: 3

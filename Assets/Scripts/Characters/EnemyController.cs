@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour, IEndGameObserver
     private EnemyStates enemyStates;
     private NavMeshAgent agent;
     private Animator anim;
-    private CharacterStates characterStates;
+    protected CharacterStates characterStates;
 
     [Header("Basic Settings")]
     public float sightRadius;
